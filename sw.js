@@ -5,7 +5,7 @@
    			caches.open('agendaMaster2').then(function(cache) {
 
 			     return cache.addAll([
-					'/index.php'
+					'/index.html'
 					,'/components/footer.js'
 					,'/components/login_.js'
 					,'/components/main.js'
