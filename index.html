@@ -65,7 +65,7 @@
 		//	mellow ads 10:18
 		if ("serviceWorker" in navigator) {
 			function go_load_pwa(){
-				isDev = true; return false;  // coment para ATIVAR O PWA e coloque o isDev em false no Deg-dm3
+			//	isDev = true; return false;  // coment para ATIVAR O PWA e coloque o isDev em false no Deg-dm3
 				window.addEventListener('load',()=>{
 					navigator.serviceWorker.register('/sw.js',{scope: '/'}).then((reg)=>{
 						console.log('Service worker registrado, segundo ele' );
