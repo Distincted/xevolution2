@@ -31,7 +31,7 @@ home = {
 
 			+$t('div',{id:'inpu_chart'},
 				$t('label',{class:'badge badge-success'},'Escolha Um Periodo de Tempo:')
-				+$t1('input',{value:30, placeholder:'',id:'input_id_charts',class:'form-control'})
+				+$t1('input',{ type:'number', value:10, placeholder:'',id:'input_id_charts',class:'form-control'})
 				+$t('button',{ onclick:'$scope.home.chart()', class:'btn btn-primary'},'Filtrar')
 			)
 		//	+$t('button',{class:'', onclick:'$scope.home.chart()'},'Gráfico')
