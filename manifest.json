@@ -4,7 +4,7 @@
 		"name" : "AgendaClub.com",
 		"scope" : "/",
 		"display" : "fullscreen",
-		"start_url" : "/index.php",
+		"start_url" : "/index.html",
 		"short_name" : "AgendaClub.com",
 		"theme_color" : "#fff",
 		"description" : "",
