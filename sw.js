@@ -39,6 +39,8 @@
 		e.respondWith(
 			caches.match(e.request).then(function(response) {
 				return response || fetch(e.request);
+			}).catch(function(err){
+				console.log(err, 'Error In sw.js')
 			})
 		);
 	});
