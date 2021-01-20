@@ -330,7 +330,7 @@
 						//	vv(key_path,'resposta do logged')
 
 							setTimeout(()=>{
-								$component({name:'main'}).then((res)=>{
+								$component({name:'main', force: true}).then((res)=>{
 								//	vv(res,'login_.js')
 									$html('body',res);
 									$scope.main.end( btn_email );

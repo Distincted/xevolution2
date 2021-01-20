@@ -1,6 +1,7 @@
 
 main_login = {
 	abs:'1',
+	router_pristyne:0,
 	router(){
 		$router.run( function(rota, params){
 		//	vv(rota,'rota main_login.js')
@@ -59,8 +60,18 @@ main_login = {
 						});
 					break;
 				default:
-					vv('default rota')
-					$router.go('#/login');
+					if( $scope.main.router_pristyne === 0){
+						$scope.main.router_pristyne = 1;
+						vv('default rota');
+						
+						$router.go('#/login');
+
+					}else if( $scope.main.router_pristyne == 1){
+						$scope.main.router_pristyne = 2;
+						vv('default rota');
+					//	$router.go('#/home');						
+					}
+					
 			}
 
 		});
@@ -114,7 +125,7 @@ main_login = {
 	end(){
 		$component({name: 'footer', async: true, promise:true}).then((res)=>{
 			$html('#footer_id', res);
-			$scope.main_login.router();
+			$scope.main.router();
 
 			/*
 			$component({name: 'webhostapp', async: true, promise:true}).then((res)=>{

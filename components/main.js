@@ -1,10 +1,17 @@
 
 main = {
 	abs:'1',
+	router_pristyne: 0,
+	router_func(){
+		if($scope.main.router_pristyne==2){
+			$scope.main.router_pristyne = 1;
+		}
+	},
 	router(){
 		$router.run(function(rota, param){
 			switch(rota){
 				case '#/home':
+				//	$scope.main.router_func();
 					$component({name:'home'}).then((res)=>{
 						$html('#main_section',res);
 						$scope.home.end();
@@ -17,15 +24,27 @@ main = {
 
 					break;
 				case '#/logout':
-					$component('main_login').then((res)=>{
+				//	$component('main').then((res)=>{
+					$component({name:'main', src: '/components/main_login.js', force:true},{} ).then((res)=>{
+
 						$html('body',res);
-						$scope.main_login.end();
-					})
+						$scope.main.end();
+					});
 					break;
 
 				default:
-					vv('default rota')
-					$router.go('#/home');
+					if( $scope.main.router_pristyne === 0){
+						$scope.main.router_pristyne = 1;
+						vv('default rota');
+						$router.go('#/home');
+
+					}else if( $scope.main.router_pristyne == 1){
+						$scope.main.router_pristyne = 2;
+						vv('default rota');
+					//	$router.go('#/home');						
+					}else{
+
+					}
 			}
 		});
 	},
@@ -74,11 +93,13 @@ main = {
 	exit(){
 	//	$router.close();
 
-		$component({name:'main_login'}  ).then(function(res){
+	//	$component({name:'main_login'}  ).then(function(res){
+		$component({name:'main', src: '/components/main_login.js', force:true},{} ).then((res)=>{
+
 			$html('body',res);
 			
 			remove_db('logged', 1).then((res)=>{
-				$scope.main_login.end();
+				$scope.main.end();
 
 			});
 		//	vv('aqui main.js')

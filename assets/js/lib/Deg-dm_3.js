@@ -1,7 +1,8 @@
 /*
-*	versao 3.0.7304
-* att 12/01/2021
+*	versao 3.0.7305
+* att 12001/2021
 * since 20/09/2019
+	force adicionado
 * fim do $router.close Novo $html() |mudado scriptSRC styleSRC	 reformulado $component
 * add $remove_func([],'')	removido arrow functions
 */
@@ -345,7 +346,7 @@ const $component = function(param, value='', locate='', others=null){
 	$start_comp(locate);
 
 	let padrao = {
-			async: true,	promise: true
+			async: true,	promise: true, force: false
 	};
 	if(typeof param =='string'){
 		padrao['name'] = param;
@@ -358,7 +359,7 @@ const $component = function(param, value='', locate='', others=null){
 		padrao = Object.assign( padrao, param);
 	}
 	let name = padrao.name;
-	if( typeof $scope[name] != 'undefined' ){
+	if( typeof $scope[name] != 'undefined' && padrao.force == false){
 		if( typeof $scope[name].template != 'undefined' ){
 
 			if(padrao.async==true){
@@ -392,16 +393,21 @@ const $component = function(param, value='', locate='', others=null){
 	}
 	var result;
 	var ok_name = null;	
+	/*
 	for( let spe in $scope){
 		if(spe==name){
 			ok_name = spe;
 			break;
 		}
 	}
-	if(ok_name!=null){
-		ok_name= null;
-		return;
+	*/
+	if( false ){
+//	if(ok_name!=null){
+	//	ok_name= null;
+	//	vv(ok_name,'ok_name')
+	//	return;
 	}else{
+
 	//	if(padrao.history==true){
 		//	_save_history({padrao: padrao, value: value, locate: locate}, padrao.href );
 	//	}
