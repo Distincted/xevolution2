@@ -213,7 +213,7 @@
 						)
 						+$t2('div', {id: 'saida'},'')
 						+$t2('button', {class: 'add-button'},'add PWA')
-						+$t2('button', {onclick: '$scope.login_.remove_pwa()'},'remove PWA')
+						+$t2('button', {onclick: 'remove_pwa()'},'remove PWA')
 					)
 				
 				);
