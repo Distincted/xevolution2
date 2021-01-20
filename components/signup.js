@@ -169,7 +169,7 @@
 						ress = data.filter((v, x)=>{
 							return v.admin_name ==aux;
 						});
-						vv(ress,'main_login');
+					//	vv(ress,'main_login');
 						let uu = $t('option',{value:0},'-----');
 						for(var i = 0; i < ress.length; i++) {
 						//	$("#btn_city").append('<option value="' + ress[i].admin_name + '">' + ress[i].admin_name + '</option');

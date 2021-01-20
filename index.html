@@ -164,10 +164,10 @@
 				get_value_db('logged', {id_log: 1 }).then((res)=>{
 				//	vv(res,'home.php')
 					if(res.length==0){
-						$component({name:'main_login',promise:true},{}, '#main_section').then((res)=>{
+						$component({name:'main', src: '/components/main_login.js',promise:true},{}, '#main_section').then((res)=>{
 						//	vv(res,'home')
 							$html('body',res);
-							$scope.main_login.end();
+							$scope.main.end();
 						});
 						
 					}else{

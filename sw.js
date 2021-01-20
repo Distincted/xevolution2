@@ -5,7 +5,7 @@
    			caches.open('agendaMaster2').then(function(cache) {
 
 			     return cache.addAll([
-					'/index.php'
+					'/index.html'
 					,'/components/footer.js'
 					,'/components/login_.js'
 					,'/components/main.js'
@@ -28,6 +28,7 @@
 					,'/assets/css/lib/CalendarPicker.style.css'
 					,'/assets/icons/icon_24.png'
 					,'/assets/js/lib/google_chats_line.js'
+					,'/assets/img/icons/favicon-512x512.png'
 			    ]);
 			})
 		);
