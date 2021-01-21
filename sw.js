@@ -17,18 +17,18 @@
 					,'/assets/css/lib/bootstrap.min.css'
 					,'/assets/css/painel.css'
 					,'/assets/css/lib/example.css'
-					,'/assets/js/lib/jqpobo.js'
+					,'/assets/css/lib/CalendarPicker.style.css'
+					,'/assets/js/lib/jqpobo2.js'
 					,'/assets/js/lib/sha512.min.js'
 					,'/assets/js/tools.js'
 					,'/assets/js/lib/Deg-dm_3.js'
 					,'/assets/js/lib/_pindexeddb.js'
+					,'/assets/js/lib/google_chats_line.js'
+					,'/assets/js/lib/CalendarPicker.js'
 					,'/assets/img/delete.png'
 					,'/assets/img/edit.png'
-					,'/assets/js/lib/CalendarPicker.js'
-					,'/assets/css/lib/CalendarPicker.style.css'
-					,'/assets/icons/icon_24.png'
-					,'/assets/js/lib/google_chats_line.js'
 					,'/assets/img/favicon-512x512.png'
+					,'/assets/icons/icon_24.png'
 			    ]);
 			})
 		);
