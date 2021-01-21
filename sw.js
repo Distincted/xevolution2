@@ -11,7 +11,7 @@
 					,'/components/main.js'
 					,'/components/main_login.js'
 					,'/components/navbar.js'
-				//	,'/components/password_.js'
+					,'/components/password_.js'
 					,'/components/signup.js'
 					,'/components/home.js'
 					,'/assets/css/lib/bootstrap.min.css'
