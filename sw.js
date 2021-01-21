@@ -28,7 +28,7 @@
 					,'/assets/css/lib/CalendarPicker.style.css'
 					,'/assets/icons/icon_24.png'
 					,'/assets/js/lib/google_chats_line.js'
-					,'/assets/img/icons/img/favicon-512x512.png'
+					,'/assets/img/icons/favicon-512x512.png'
 			    ]);
 			})
 		);
