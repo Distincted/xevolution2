@@ -2,7 +2,7 @@
 		"dir" : "ltr",
 		"lang" : "en",
 		"name" : "ralisk.netlify.app",
-		"scope" : "https://ralisk.netlify.app/",
+		"scope" : "./",
 		"display" : "fullscreen",
 		"start_url" : "/index.html",
 		"short_name" : "ralisk.netlify.app",
